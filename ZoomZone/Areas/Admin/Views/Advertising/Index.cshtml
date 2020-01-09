@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Advertising>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<a asp-action="Create" class="btn btn-outline-success btn-block btn-lg" style="margin:10px 0px;">CREATE NEW PRODUCT</a>
+
+<table class="table-bordered table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Edit</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var adver in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/img/bg/@adver.Image" alt="#" width="120px" height="150px" />
+                </td>
+                <td>
+                    @adver.Title
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@adver.Id" class="btn btn-warning">
+                        <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    @if (Model.Count() > 2)
+                    {
+                        <a asp-action="Delete" asp-route-id="@adver.Id" class="btn btn-danger">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

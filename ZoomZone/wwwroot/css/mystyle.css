@@ -1,0 +1,119 @@
+.searchMy{
+    background-color:black;
+}
+select{
+    width: 65% !important;
+    margin: 10% 0;
+    font-size: 17px !important;
+    margin-left: 25%;
+}
+.col-4>div>input{
+    font-size: 17px !important;
+    width: 65% !important;
+    margin: 10% 0;
+    border: 1px solid #DFAE2A;
+    box-shadow: 0 0 0 1px #DFAE2A;
+    margin-left: 25%;
+}
+
+label {
+    color: #20a385;
+    font-size: 17px;
+    position: absolute;
+}
+
+.col-12>.buttonMy{
+    background-color: #DFAE2A;
+    width: 98%;
+    margin-bottom: 20px;
+    font-size: 22px;
+    
+}
+.col-12>.buttonMy:hover{
+    background-color: rgb(245, 193, 49);
+}
+.searchLable {
+    margin-top: 7px;
+}
+.gifLogo {
+    display: flex;
+    align-items: center;
+   
+}
+.gifLogo> img {
+        width: 95%;
+        height: 180px;
+    }
+
+.sliderImgSize {
+    height: 600px;
+    background-size: cover;
+    background-position: center center;
+}
+.advertisingTitle {
+    position: relative;
+}
+
+    .advertisingTitle > span {
+        padding: 11px 15px;
+        font-size: 20px;
+        border-style: double;
+        position: absolute;
+        top: 35%;
+        left: 4%;
+        color: white;
+        font-family: -webkit-body;
+        font-weight: 500;
+    }
+
+/*#firstProducCarusel{
+    display:flex;
+}*/
+
+.detalisMini_Info>div{
+    display:flex;
+
+}
+.detalisMini_Info > .extraInfo > h4 {
+    font-size: 21px;
+    font-weight: 500;
+}
+.detalisMini_Info > .extraInfo > span {
+    margin: 0px 6%;
+    font-size: 22px;
+    font-weight: 500;
+}
+.detalisMini_Info>.ProducName>span {
+    margin: 8px 6%;
+    font-size: 26px;
+    font-weight: 600;
+}
+.detalisMini_Info>.ProducName>h2 {
+    font-size: 37px;
+    line-height: 36px;
+    font-weight: 600;
+}
+.mainProductList{
+    display:contents;
+}
+
+.single_product {
+    margin-bottom: 13%;
+    border: 1px solid #e5e5e5;
+ 
+}
+    .single_product > .product_content > .action_links > ul {
+        margin-bottom: 8%;
+    }
+
+.col-lg-9 > .mini_cart_wrapper > a > span {
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.col-lg-9 > .mini_cart_wrapper:hover > a > span {
+    background: #20a385;
+    border-color: #20a385;
+}

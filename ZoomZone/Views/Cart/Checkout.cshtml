@@ -1,0 +1,154 @@
+﻿@model List<CartItem>
+
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>Shopping Cart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--shopping cart area start -->
+<div class="shopping_cart_area mt-60">
+    <div class="container">
+        <form action="#">
+            <div class="row">
+                <div class="col-12">
+                    @if (Model.Count == 0)
+                    {
+                        <div class="alert alert-warning">
+                            Deer user, you have not added anything to your God damn cart. Go and get something.
+                            <br />
+                            <a href="/">Go there!</a>
+                        </div>
+                    }
+                    else
+                    {
+
+
+                    <div class="table_desc">
+                        <div class="cart_page table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="product_remove">Delete</th>
+                                        <th class="product_thumb">Image</th>
+                                        <th class="product_name">Catagory</th>
+                                        <th class="product-price">Name</th>
+                                        <th class="product_quantity">Count</th>
+                                        <th class="product_total">Price</th>
+                                        <th class="product_total">Total Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+
+                                    <tr>
+                                        <td class="product_remove"><a asp-controller="Cart" asp-action="CheckDelete" asp-route-id="@item.ProductId"><i class="fa fa-trash-o"></i></a></td>
+                                        <td class="product_thumb"><a href="#"><img src="~/img/MyProduct/@item.Image" alt=""></a></td>
+                                        <td class="product_name"><a href="#">@item.BrandName</a></td>
+                                        <td class="product-price">@item.Name</td>
+                                        <td class="product_quantity"><label></label> <input min="1" max="100" value="@item.Count" type="number"></td>
+                                        <td class="product-price">
+                                            <span class="old_price" style="color:red;  font-size: 15px;">
+                                                @if (item.Discount != null && item.Discount != 0)
+                                                {
+                                                    <del>
+                                                        @(item.Price)
+                                                        Anz
+                                                    </del>
+                                                }
+
+                                            </span>
+                                            <p class="new_price">
+                                                @if (item.Discount != null)
+                                                {
+                                                    @(item.Price - (item.Price * item.Discount) / 100)
+                                                }
+                                                else
+                                                {
+                                                    @(item.Price)
+                                                }
+                                                Azn
+                                            </p>
+                                        </td>
+                                        <td class="product_total">
+                                            <span class="old_price" style="color:red;  font-size: 15px;">
+                                                @if (item.Discount != null && item.Discount != 0)
+                                                {
+                                                    <del>
+                                                        @((item.Price) * item.Count)
+                                                        Azn
+                                                    </del>
+                                                }
+
+                                            </span>
+                                            <p class="new_price" style="font-size: 17px;">
+                                                @if (item.Discount != null)
+                                                {
+                                                    @((item.Price - (item.Price * item.Discount) / 100) * item.Count)
+                                                }
+                                                else
+                                                {
+                                                    @((item.Price) * item.Count)
+                                                }
+                                                Azn
+                                            </p>
+
+                                        </td>
+
+
+                                    </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cart_submit">
+                            <button type="submit">update cart</button>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+            <!--coupon code area start-->
+            <div class="coupon_area">
+                <div class="row">
+                   
+                    <div class="col-lg-12 col-md-12">
+                        <div class="coupon_code right">
+                            <h3>Cart Totals</h3>
+                            <div class="coupon_inner">
+                              
+                                <div class="cart_subtotal">
+                                    <p>Total</p>
+                                    <p class="cart_amount"></p>
+                                </div>
+                                <div class="checkout_btn">
+                                    <a asp-controller="Cart" asp-action="FinalStage">Proceed to Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--coupon code area end-->
+        </form>
+    </div>
+</div>
+<!--shopping cart area end -->

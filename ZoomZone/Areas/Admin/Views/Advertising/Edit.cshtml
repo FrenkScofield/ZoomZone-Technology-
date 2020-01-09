@@ -1,0 +1,56 @@
+﻿@model Advertising
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <form method="post" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+
+
+                        <input asp-for="UpPhoto" multiple class="form-control " style="font-size: 23px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+
+                        <span asp-validation-for="UpPhoto" class="text-danger" style="margin-left: 37px"></span>
+                    </div>
+                    <div class="form-grup my3  ">
+                        <label>Current image</label>
+                        <img src="~/img/bg/@Model.Image" width="400" />
+                        <input type="hidden" name="Image" value="@Model.Image" />
+                       
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Title"></label>
+                        <input type="text" asp-for="@Model.Title" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+                        <span asp-validation-for="@Model.Title" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <input type="submit" class="btn btn-info" value="Update" />
+            </form>
+        </div>
+    </div>
+    <div class="row mt-15">
+        <div class="col-12">
+            <a asp-action="Index" class="btn btn-outline-info"><span class="fa fa-arrow-left">Back to index</span></a>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+}
+

@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Product>
+
+
+
+@{
+    ViewData["Title"] = "ProductPage";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<a asp-action="Create" class="btn btn-outline-success btn-block btn-lg" style="margin:10px 0px;">CREATE NEW PRODUCT</a>
+
+<table class="table-bordered table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Memory</th>
+            <th>RAM</th>
+            <th>Camera</th>
+            <th>Ghz</th>
+            <th>DisplaySize</th>
+            <th>Batary</th>
+            <th>Processor</th>
+            <th>OS</th>
+            <th>VideoCart</th>
+            <th>ProductionDate</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Description</th>
+            <th style="word-spacing: 28px;">Edit Delete</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pro in Model)
+        {
+        <tr>
+            <td>
+                <img src="~/img/MyProduct/@pro.Images.FirstOrDefault(v=>v.ProductId==pro.Id).ImagePath" alt="#" width="100px" height="80px" />
+            </td>
+            <td>@Html.Raw(pro.Name)</td>
+            <td>@Html.Raw(pro.Memory)</td>
+            <td>@Html.Raw(pro.RAM)</td>
+            <td>@Html.Raw(pro.Camera)</td>
+            <td>@Html.Raw(pro.Ghz)</td>
+            <td>@Html.Raw(pro.DisplaySize)</td>
+            <td>@Html.Raw(pro.Batary)</td>
+            <td>@Html.Raw(pro.Processor)</td>
+            <td>@Html.Raw(pro.OS)</td>
+            <td>@Html.Raw(pro.VideoCart)</td>
+            <td>@Html.Raw(pro.ProductionDate)</td>
+            <td>@Html.Raw(pro.Price)</td>
+            <td>@Html.Raw(pro.Discount)</td>
+            <td>
+                @if (pro.Description.Length > 20)
+                {
+                    @Html.Raw(pro.Description.Substring(0, 20) + "...")
+                }
+                else
+                {
+                    @Html.Raw(pro.Description)
+                }
+            </td>
+
+
+            <td style="display:flex;">
+                <a asp-action="Edit" asp-route-id="@pro.Id" class="btn btn-warning" style="margin: 0px 8px;">
+                    <i class="fas fa-pencil-alt"></i>
+                </a>
+                @if (Model.Count() > 4)
+                {
+                    <a asp-action="Delete" asp-route-id="@pro.Id" class="btn btn-danger" style="margin: 0px 8px;">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

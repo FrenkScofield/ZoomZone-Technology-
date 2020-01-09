@@ -1,0 +1,45 @@
+﻿@model List<CartItem>
+
+@foreach (var item in Model)
+{
+    <div class="cart_item">
+        <div class="cart_img">
+            @if (item.Image != null)
+            {
+                <a href="#"><img style="height:auto;" src="~/img/MyProduct/@item.Image" alt=""></a>
+
+            }
+        </div>
+        <div class="cart_info">
+            <a href="#">@item.Name</a>
+
+            <span class="quantity">Count: @item.Count</span>
+            <div>
+                <span class="new_price" style="font-size: 17px;">
+                    @if (item.Discount != 0)
+                    {
+                        @((item.Price - (item.Price * item.Discount) / 100) * item.Count)
+                    }
+                    else
+                    {
+                        @((item.Price) * item.Count)
+                    }
+                </span>
+                <span class="old_price" style="color:red;  font-size: 15px;">
+                    @if (item.Discount != null && item.Discount != 0)
+                    {
+                    <del>
+                        @((item.Price) * item.Count)
+                    </del>
+                    }
+
+                </span>
+            </div>
+          
+
+        </div>
+        <div class="cart_remove">
+            <a href="#"><i class="ion-android-close"></i></a>
+        </div>
+    </div>
+}

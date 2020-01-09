@@ -1,0 +1,134 @@
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.deps.json
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.runtimeconfig.json
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.runtimeconfig.dev.json
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.dll
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.csprojAssemblyReference.cache
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorAssemblyInfo.cache
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorAssemblyInfo.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.AssemblyInfoInputs.cache
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.AssemblyInfo.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorTargetAssemblyInfo.cache
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.pdb
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.dll
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.pdb
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.TagHelpers.input.cache
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.TagHelpers.output.cache
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorCoreGenerate.cache
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorTargetAssemblyInfo.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.Views.dll
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.Views.pdb
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.Views.pdb
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.csproj.CopyComplete
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\bin\Debug\netcoreapp2.1\appsettings.json
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Dasboard\Index.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\Create.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\Slider.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\Edit.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\Delete.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Advertising\Index.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Advertising\Create.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Advertising\Delete.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Advertising\Edit.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Product_Partial.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Popup_Partial.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\ProductAdd\ProductPage.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\ProductAdd\Edit.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\ProductAdd\Create.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\ProductAdd\Delete.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\CategoryIndex.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Create.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Edit.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Delete.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brend\BrendIndex.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brend\Create.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brend\Edit.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\ProductDetaile\DetaileProduc.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brend\Delete.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ProductBasket_Partial.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Checkout.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\Conformemail.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\FailedConfirmation.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\Signin.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Cart\FinalStage.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\About\AboutViewPage.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\About\AboutAdminPage.cshtml.g.cs
+E:\FINAL PROJECT\ZoomZone\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Account\Login.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.deps.json
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.runtimeconfig.json
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.runtimeconfig.dev.json
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.dll
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.pdb
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.Views.dll
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\bin\Debug\netcoreapp2.1\ZoomZone.Views.pdb
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.csprojAssemblyReference.cache
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorAssemblyInfo.cache
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorAssemblyInfo.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.AssemblyInfoInputs.cache
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.AssemblyInfo.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.TagHelpers.input.cache
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.TagHelpers.output.cache
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorCoreGenerate.cache
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\About\AboutAdminPage.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Account\Login.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Advertising\Create.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Advertising\Delete.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Advertising\Edit.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Advertising\Index.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brend\BrendIndex.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brend\Create.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brend\Delete.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brend\Edit.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\CategoryIndex.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Create.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Delete.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Edit.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Dasboard\Index.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\ProductAdd\Create.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\ProductAdd\Delete.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\ProductAdd\Edit.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\ProductAdd\ProductPage.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\Create.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\Delete.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\Edit.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\Slider.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\About\AboutViewPage.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\Conformemail.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\FailedConfirmation.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\Signin.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Checkout.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Cart\FinalStage.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\ProductDetaile\DetaileProduc.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Popup_Partial.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ProductBasket_Partial.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Product_Partial.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorTargetAssemblyInfo.cache
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.RazorTargetAssemblyInfo.cs
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.Views.pdb
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.dll
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.pdb
+C:\Users\kam_a\Desktop\ZoomZoneTecnology\ZoomZone\obj\Debug\netcoreapp2.1\ZoomZone.csproj.CopyComplete

@@ -1,0 +1,69 @@
+﻿@model UserLoginModel
+
+@{
+    ViewData["Title"] = "Signin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="POST">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <!--breadcrumbs area start-->
+    <div class="breadcrumbs_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb_content">
+                        <ul>
+                            <li><a href="~/Admin/index.html">home</a></li>
+                            <li>login</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--breadcrumbs area end-->
+    <!-- customer login start -->
+    <div class="customer_login mt-60">
+        <div class="container">
+            <div class="row">
+           
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form register">
+                        <h2>Register</h2>
+                      
+                        <p>
+                            <label class="control-lable" asp-for="EmailOrUsernaem"></label>
+                            <input asp-for="EmailOrUsernaem" class="form-control">
+                            <span asp-validation-for="EmailOrUsernaem" class="text-danger"></span>
+                        </p>
+                        <p>
+                            <label class="control-lable" asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </p>
+                        <p>
+                            <label class="control-lable" asp-for="RememberMe" style="display:inline;"> </label>
+                            <input asp-for="RememberMe" class="form-control">
+                           
+                        </p>
+                        <a asp-controller="Account" asp-action="ForgotPassword" class="btn btn-link d-block my-4">
+                            Forgot Password ?
+                        </a>
+                        <div class="login_submit">
+                            <button type="submit">Signin</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!--register area end-->
+            </div>
+        </div>
+    </div>
+    <!-- customer login end -->
+</form>
+
+@section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}

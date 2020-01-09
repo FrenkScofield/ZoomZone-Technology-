@@ -1,0 +1,36 @@
+﻿@model HomeModels
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<form method="post" asp-action="Delete" asp-route-id="@Model.Brand.Id" enctype="multipart/form-data">
+
+
+
+    <div class="form-group">
+        <label asp-for="@Model.Brand.Name"></label>
+        <input type="text" asp-for="@Model.Brand.Name" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+        <span asp-validation-for="@Model.Brand.Name" class="text-danger"></span>
+    </div>
+
+    <div class="alert alert-danger">
+        Are you sure to delete this Catagory?
+    </div>
+
+    <input type="submit" class="btn btn-danger btn-lg btn-block" value="Delete" />
+</form>
+
+<a asp-action="BrendIndex" class="btn btn-primary btn-block btn-lg mt-3">Back to Index</a>
+
+@section scripts
+{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+
+

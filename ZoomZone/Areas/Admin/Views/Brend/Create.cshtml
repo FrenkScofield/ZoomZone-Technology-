@@ -1,0 +1,39 @@
+﻿@model HomeModels
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data" class="pvId">
+    <div class="form-group">
+        <label asp-for="Product.CatBraPivot.Category"></label>
+        <select asp-for="CategoryId" class="form-control categorySelect" style="font-size: 23px; width: 75%; border-radius: 15px; margin: 10px 0px; margin-left: 2%; height: 54px;"
+                asp-items="@(new SelectList(ViewBag.catagory,"Id","Name"))">
+            <option value="0">Select</option>
+        </select>
+        <span asp-validation-for="CatBraPivots" class="text-danger"></span>
+
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="Brand.Name"></label>
+        <input type="text" asp-for="Brand.Name" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+        <span asp-validation-for="Brand.Name" class="text-danger"></span>
+    </div>
+
+
+    <input type="submit" class="btn btn-success btn-lg btn-block" value="Submit" />
+
+    <a asp-action="BrendIndex" class="btn btn-primary btn-block btn-lg mt-3">Back to index</a>
+
+</form>
+
+@section scripts
+{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+
+

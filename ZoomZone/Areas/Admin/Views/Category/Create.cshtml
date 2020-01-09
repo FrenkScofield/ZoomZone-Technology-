@@ -1,0 +1,20 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+    <form method="post" enctype="multipart/form-data">
+
+
+
+        <div class="form-group">
+            <label asp-for="Name" style="font-size: 25px; font-weight: 600;">Write Catagory Name</label>
+
+            <input type="text" asp-for="Name" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+        </div>
+
+        <input type="submit" class="btn btn-success btn-lg btn-block" value="Submit" />
+
+        <a asp-action="CategoryIndex" class="btn btn-primary btn-block btn-lg mt-3">Back to Index</a>
+    </form>

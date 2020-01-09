@@ -1,0 +1,122 @@
+﻿@model HomeModels
+
+@{
+    ViewData["Title"] = "Create";
+  
+}
+
+    <form method="post" enctype="multipart/form-data" class="pvId">
+        <div class="form-group">
+            <label asp-for="Product.CatBraPivot.Category"></label>
+            <select asp-for="Product.CatBraPivot" class="form-control categorySelect" style="font-size: 23px; width: 75%; border-radius: 15px; margin: 10px 0px; margin-left: 2%; height: 54px;"
+                    asp-items="@(new SelectList(ViewBag.catagory,"Id","Name"))">
+                <option value="0">Select</option>
+            </select>
+            <span asp-validation-for="CatBraPivots" class="text-danger"></span>
+
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.CatBraPivot.Brand"></label>
+            <select asp-for="Product.CatBraPivot" class="form-control brendSelect" style="font-size: 23px; width: 75%; border-radius: 15px; margin: 10px 0px; margin-left: 2%; height: 54px;"
+                    asp-items="@(new SelectList(ViewBag.brand,"Id","Name"))">
+                <option value="0">Select</option>
+            </select>
+            <span asp-validation-for="CatBraPivots" class="text-danger"></span>
+
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Photo"></label>
+            <input asp-for="Photo" multiple class="form-control " style="font-size: 23px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Photo" class="text-danger"></span>
+
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Name"></label>
+            <input type="text" asp-for="Product.Name" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Memory"></label>
+            <input type="text" asp-for="Product.Memory" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.Memory" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.RAM"></label>
+            <input type="text" asp-for="Product.RAM" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.RAM" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Camera"></label>
+            <input type="text" asp-for="Product.Camera" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.Camera" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Ghz"></label>
+            <input type="text" asp-for="Product.Ghz" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.Ghz" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.DisplaySize"></label>
+            <input type="text" asp-for="Product.DisplaySize" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.DisplaySize" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Batary"></label>
+            <input type="text" asp-for="Product.Batary" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.Batary" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Processor"></label>
+            <input type="text" asp-for="Product.Processor" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.Processor" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.OS"></label>
+            <input type="text" asp-for="Product.OS" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.OS" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.VideoCart"></label>
+            <input type="text" asp-for="Product.VideoCart" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.VideoCart" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.ProductionDate"></label>
+            <input type="text" asp-for="Product.ProductionDate" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.ProductionDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Price"></label>
+            <input type="number" asp-for="Product.Price" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Discount"></label>
+            <input type="text" asp-for="Product.Discount" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+            <span asp-validation-for="Product.Discount" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Description"></label>
+            <textarea asp-for="Product.Description" class="form-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;"></textarea>
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
+        </div>
+
+        <input type="submit" class="btn btn-success btn-lg btn-block" value="Submit" />
+
+        <a asp-action="ProductPage" class="btn btn-primary btn-block btn-lg mt-3">Back to index</a>
+
+    </form>
+
+@section scripts
+{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+

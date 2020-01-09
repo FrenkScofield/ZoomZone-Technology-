@@ -1,0 +1,34 @@
+﻿@model SliderHome
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<form method="post" asp-action="Delete" asp-route-id="@Model.Id" enctype="multipart/form-data">
+
+
+    <div class="form-group">
+        <label asp-for="@Model.Photo"></label>
+        <img src="~/img/slider/@Model.SImage" width="400" />
+        <span asp-validation-for="@Model.Photo" class="text-danger"></span>
+    </div>
+
+    <div class="alert alert-danger">
+        Are you sure to delete this Catagory?
+    </div>
+
+    <input type="submit" class="btn btn-danger btn-lg btn-block" value="Delete" />
+</form>
+
+<a asp-action="Slider" class="btn btn-primary btn-block btn-lg mt-3">Back to Index</a>
+
+@section scripts
+{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+
+

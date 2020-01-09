@@ -1,0 +1,28 @@
+﻿@model SliderHome
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+
+
+
+    <div class="form-group">
+        <label asp-for="Photo"></label>
+        <input asp-for="Photo" multiple class="form-control " style="font-size: 23px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+        <span asp-validation-for="Photo" class="text-danger"></span>
+    </div>
+    
+    <input type="submit" class="btn btn-success btn-lg btn-block" value="Submit" />
+</form>
+
+@section scripts
+{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+
+

@@ -1,0 +1,108 @@
+﻿@model HomeViewModel
+@using Microsoft.AspNetCore.Http;
+
+@foreach (var pro in Model.LodMorProducts)
+{
+
+    <div class="col-md-3 @pro.CatBraPivot.Id">
+        <a asp-controller="ProductDetaile" asp-action="DetaileProduc" asp-route-id="@pro.Id">
+            <div class="single_product">
+                <div class="product_thumb">
+                    <img style="height:180px;" src="~/img/MyProduct/@pro.Images.FirstOrDefault().ImagePath" alt="">
+                    <div class="label_product">
+
+                    </div>
+                    <div class="quick_button" id="quick_button">
+
+                        <a asp-action="IndeX" asp-controller="Home" asp-route-Id="@pro.Id" data-id="@pro.Id" data-toggle="modal" data-target="#modal_box" title="quick view"> <i class="zmdi zmdi-eye eyesButton" data-id="@pro.Id" @pro.Id></i></a>
+                    </div>
+                </div>
+                <div class="product_content">
+                    <div class="product_name">
+                        <h3><a href="~/Admin/product-details.html">@pro.Name</a></h3>
+                    </div>
+                    <div class="product_rating">
+                        <ul>
+                            <li><a href="~/Admin/#"><i class="zmdi zmdi-star-outline"></i></a></li>
+                            <li><a href="~/Admin/#"><i class="zmdi zmdi-star-outline"></i></a></li>
+                            <li><a href="~/Admin/#"><i class="zmdi zmdi-star-outline"></i></a></li>
+                            <li><a href="~/Admin/#"><i class="zmdi zmdi-star-outline"></i></a></li>
+                            <li><a href="~/Admin/#"><i class="zmdi zmdi-star-outline"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="price_box" style="    font-size: 23px ; font-weight: 700;">
+                        <span class="old_price" style="color:red;  font-size: 18px;">
+                            @if (pro.Discount != null && pro.Discount != 0)
+                            {
+                                <del>
+                                    @(pro.Price)
+                                    Anz
+                                </del>
+                            }
+
+                        </span>
+                        <p class="new_price">
+                            @if (pro.Discount != null && pro.Discount != 0)
+                            {
+                                @(pro.Price - (pro.Price * pro.Discount) / 100)
+                            }
+                            else
+                            {
+                                @(pro.Price)
+                            }
+                            Azn
+                        </p>
+
+                    </div>
+                    <div class="action_links">
+                        <ul>
+
+                                @if (Model.Likes?.FirstOrDefault(v => v.ProductId == pro.Id) == null)
+                                {
+                                    if (User.Identity.IsAuthenticated)
+                                    {
+
+                                        <li class="wishlist"><a data-id="@pro.Id" class="Like" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+
+
+                                    }
+                                    else
+                                    {
+                                        <li class="wishlist"><a asp-action="Signin" asp-controller="Account" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                                        
+                                    }
+                                }
+
+                                @if (Model.Likes?.Count > 0)
+                                {
+                                    foreach (var item in Model.Likes.Where(v => v.ProductId == pro.Id))
+                                    {
+
+                                        if (User.Identity.IsAuthenticated)
+                                        {
+
+                                            <li class="wishlist"><a style="background-color:red;" data-id="@pro.Id" class="Like" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+
+
+                                        }
+                                        else
+                                        {
+                                            <li class="wishlist"><a style="background-color:red;" asp-action="Signin" asp-controller="Account" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+
+                                        }
+
+
+                                    }
+
+                                }
+
+                            <li data-id="@pro.Id" class="add_to_cart"><a title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
+                            <li class="compare"><a href="~/Admin/#" title="compare"><i class="zmdi zmdi-swap"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+}
+

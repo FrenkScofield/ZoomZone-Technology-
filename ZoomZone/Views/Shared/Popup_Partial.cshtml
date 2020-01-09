@@ -1,0 +1,127 @@
+﻿@model HomeViewModel
+
+<div  class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <button type="button" id="closePopup" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal_body" id="pophup">
+            <div class="container">
+               
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-12">
+                            <div class="modal_tab">
+                                <div class="tab-content product-details-large">
+                                   
+                                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                        <div class="modal_tab_img">
+                                            <a href="#"><img src=@Href($"~/img/MyProduct/{@Model.Product.Images?.FirstOrDefault()?.ImagePath}") alt="#"></a>
+                                        </div>
+                                    </div>
+                                  
+                                   
+                                </div>
+                                <div class="modal_tab_button">
+                                    <ul class="nav product_navactive owl-carousel owl-loaded" role="tablist">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage" >
+
+                                                @foreach (var item in Model.Product.Images)
+                                                {
+                                                    <div class="owl-item cloned" style="    width: 90px;">
+
+                                                    <li>
+                                                        <a class="nav-link active " data-toggle="tab" href="#" role="tab" aria-controls="tab1" aria-selected="false"><img style="height:auto;" src="~/img/MyProduct/@item.ImagePath" alt=""></a>
+                                                    </li>
+                                                    </div>
+
+                                                }
+                                            </div>
+                                        </div>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12">
+                            <div class="modal_right">
+                                <div class="variants_selects">
+
+                                    <div class="detalisMini_Info">
+                                        <div class="ProducName">
+                                            <h2>Name:  @Model.Product.Name</h2>
+
+                                        </div>
+                                        <div class="extraInfo" style="    margin-top: 20px;">
+                                            <h4>Memory:</h4>
+                                            <span>@Model.Product.Memory</span>
+                                        </div>
+                                        <div class="extraInfo" style="    margin-top: 9px; margin-bottom: 13px;">
+                                            <h4>RAM:</h4>
+                                            <span style="padding-top: 7px;">@Model.Product.RAM</span>
+                                        </div>
+                                    </div>
+                                    <div class="variants_color">
+                                        <h2>Color</h2>
+                                        <select class="select_option">
+                                            <option selected value="1">purple</option>
+                                            <option value="1">violet</option>
+                                            <option value="1">black</option>
+                                            <option value="1">pink</option>
+                                            <option value="1">orange</option>
+                                        </select>
+                                    </div>
+                                    <div class="modal_description mb-15">
+                                        <h3 style="font-size: 25px;">Description</h3>
+                                        <p>@Model.Product.Description</p>
+                                    </div>
+                                    <div class="modal_price mb-10" style="font-size: 23px ; font-weight: 700;">
+                                        <h3 style="font-size: 25px;">Price</h3>
+                                        <span class="old_price" style="text-decoration: line-through; color:red;  font-size: 18px;">
+
+                                            @if (Model.Product.Discount != null && Model.Product.Discount != 0)
+                                            {
+                                                <span>
+                                                    @Model.Product.Price  Azn
+
+                                                </span>
+                                            }
+
+                                        </span>
+                                        <span class="current_price" style=" color:black; font-size: 23px ; font-weight: 700;">
+                                            @if (Model.Product.Discount != null)
+                                            {
+
+                                                @(Model.Product.Price - (Model.Product.Price * Model.Product.Discount) / 100)
+                                            }
+                                            else
+                                            {
+                                                @Model.Product.Price
+                                            }
+                                            Azn
+                                        </span>
+                                    </div>
+                                    <div class="modal_add_to_cart">
+                                        <form action="#">
+                                            <input min="0" max="100" step="2" value="1" type="number">
+                                            <button  data-id="@Model.Product.Id" class="add_to_cart" type="submit">add to cart</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal_social">
+                                    <h2>Share this product</h2>
+                                    <ul>
+                                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

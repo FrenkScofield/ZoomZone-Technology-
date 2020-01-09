@@ -1,0 +1,629 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ZoomZone</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="#">
+    <link rel="stylesheet" href="~/css/plugins.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+</head>
+<body>
+    <!--header area start-->
+    <header class="header_area header_seven">
+        <div class="header_top header_top_seven">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="welcome_text">
+                            <p>Welcome to <span>Electronics Store</span> </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="top_right text-right">
+                            <ul>
+                                <li class="currency">
+                                    <a href="#"><i class="fa fa-dollar"></i> US Dollar <i class="zmdi zmdi-caret-down"></i></a>
+                                    <ul class="dropdown_currency">
+                                        <li><a href="#">EUR – Euro</a></li>
+                                        <li><a href="#">GBP – British Pound</a></li>
+                                        <li><a href="#">INR – India Rupee</a></li>
+                                    </ul>
+                                </li>
+                                <li class="language">
+                                    <a href="#"><i class="zmdi zmdi-dribbble"></i> English1 <i class="zmdi zmdi-caret-down"></i></a>
+                                    <ul class="dropdown_language">
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">Germany</a></li>
+                                    </ul>
+                                </li>
+                                <li class="top_links">
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a>Welcome @User.Identity.Name </a>
+
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Account" asp-action="Signin"><i class="zmdi zmdi-account"> Sign In </i></a>
+
+                                    }
+                                </li>
+                                <li class="top_links">
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a asp-controller="Account" asp-action="Signout">Signout </a>
+
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Account" asp-action="Register"><i class="zmdi zmdi-account"> Sign Up </i></a>
+
+                                    }
+                                  
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--header center area start-->
+        <div class="header_middle header_middle_seven" style="background-color:black; padding: 20px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="logo">
+                            <a asp-controller="Home" asp-action="Index"><img src="~/img/logo/logom.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9" style="display: flex; align-items: center;">
+
+                        <div class="search-container">
+                            <div class="gifLogo">
+                                <img src="~/img/logo/giphy.gif" alt="Alternate Text" />
+
+                            </div>
+                        </div>
+                        <div class="mini_cart_wrapper" style="    width: 40%; float: right;">
+                            @* After refresh the page, the number of products remaining in the session show *@
+                            @{
+                                var cartCount = 0;
+
+                                var cartjson = Context.Session.GetString("cart");
+
+                                if (cartjson != null)
+                                {
+                                    var cart = Newtonsoft.Json.JsonConvert.DeserializeObject<List<CartItem>>(cartjson);
+
+                                    cartCount = cart.Sum(c => c.Count);
+                                }
+
+                            }
+                            <a href="/Cart/Checkout">
+                                <i style="color:#DFAE2A;" class="zmdi zmdi-shopping-basket"></i>
+                                <span id="cart_count" class="badge badge-light ml-3">
+                                    @cartCount - Product
+                                </span>
+                            </a>
+                            <!--mini cart-->
+                            <div class="mini_cart mini_cart_seven">
+
+                                <div class="mini_cart_footer">
+                                    <div class="cart_button" style="float:right;">
+                                     
+                                        <a asp-controller="Cart" asp-action="Checkout">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--mini cart end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <!--header center area end-->
+        <!--header middel start-->
+        <div class="header_bottom header_bottom_seven">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                      
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="main_menu menu_seven header_position">
+                            <nav>
+                                <ul>
+
+                                    <li class="active">
+                                        <a href="index.html"><i class="zmdi zmdi-home"></i> home <i class="zmdi zmdi-caret-down"></i></a>
+                                        <ul class="sub_menu">
+                                            <li><a href="index.html">Home 1</a></li>
+                                            <li><a href="index-2.html">Home 2</a></li>
+                                            <li><a href="index-3.html">Home 3</a></li>
+                                            <li><a href="index-4.html">Home 4</a></li>
+                                            <li><a href="index-5.html">Home 5</a></li>
+                                            <li><a href="index-6.html">Home 6</a></li>
+                                            <li><a href="index-7.html">Home 7</a></li>
+                                            <li><a href="index-8.html">Home 8</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega_items">
+                                        <a href="shop.html"><i class="zmdi zmdi-shopping-basket"></i> shop <i class="zmdi zmdi-caret-down"></i></a>
+                                        <div class="mega_menu">
+                                            <ul class="mega_menu_inner">
+                                                <li>
+                                                    <a href="#">Shop Layouts</a>
+                                                    <ul>
+                                                        <li><a href="shop-fullwidth.html">Full Width</a></li>
+                                                        <li><a href="shop-fullwidth-list.html">Full Width list</a></li>
+                                                        <li><a href="shop-right-sidebar.html">Right Sidebar </a></li>
+                                                        <li><a href="shop-right-sidebar-list.html"> Right Sidebar list</a></li>
+                                                        <li><a href="shop-list.html">List View</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">other Pages</a>
+                                                    <ul>
+                                                        <li><a href="cart.html">cart</a></li>
+                                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                                        <li><a href="checkout.html">Checkout</a></li>
+                                                        <li><a href="my-account.html">my account</a></li>
+                                                        <li><a href="404.html">Error 404</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Product Types</a>
+                                                    <ul>
+                                                        <li><a href="product-details.html">product details</a></li>
+                                                        <li><a href="product-sidebar.html">product sidebar</a></li>
+                                                        <li><a href="product-grouped.html">product grouped</a></li>
+                                                        <li><a href="variable-product.html">product variable</a></li>
+
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html"><i class="zmdi zmdi-collection-music"></i> blog <i class="zmdi zmdi-caret-down"></i></a>
+                                        <ul class="sub_menu pages">
+                                            <li><a href="blog-details.html">blog details</a></li>
+                                            <li><a href="blog-fullwidth.html">blog fullwidth</a></li>
+                                            <li><a href="blog-sidebar.html">blog sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-star"></i> pages <i class="zmdi zmdi-caret-down"></i></a>
+                                        <ul class="sub_menu pages">
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="services.html">services</a></li>
+                                            <li><a href="portfolio.html">portfolio</a></li>
+                                            <li><a href="faq.html">Frequently Questions</a></li>
+                                            <li><a href="contact.html">contact</a></li>
+                                            <li><a href="login.html">login</a></li>
+                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="404.html">Error 404</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a asp-controller="About" asp-action="AboutViewPage"><i class="zmdi zmdi-comments"></i> about Us</a></li>
+                                    <li><a href="contact.html"><i class="zmdi zmdi-account-box-mail"></i>  Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header middel end-->
+
+    </header>
+    <!--header area end-->
+    <!--Offcanvas menu area start-->
+    <div class="Offcanvas_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="canvas_open">
+                        <span>MENU</span>
+                        <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                    </div>
+                    <div class="Offcanvas_menu_wrapper">
+                        <div class="canvas_close">
+                            <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                        </div>
+                        <div class="welcome_text">
+                            <p>Welcome to <span>Electronics Store</span> </p>
+                        </div>
+
+                        <div class="top_right">
+                            <ul>
+                                <li class="currency">
+                                    <a href="#"><i class="fa fa-dollar"></i> US Dollar <i class="zmdi zmdi-caret-down"></i></a>
+                                    <ul class="dropdown_currency">
+                                        <li><a href="#">EUR – Euro</a></li>
+                                        <li><a href="#">GBP – British Pound</a></li>
+                                        <li><a href="#">INR – India Rupee</a></li>
+                                    </ul>
+                                </li>
+                                <li class="language">
+                                    <a href="#"><i class="zmdi zmdi-dribbble"></i> English1 <i class="zmdi zmdi-caret-down"></i></a>
+                                    <ul class="dropdown_language">
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">Germany</a></li>
+                                    </ul>
+                                </li>
+                                <li class="top_links">
+                                    <a asp-controller="Account" asp-action="Register"><i class="zmdi zmdi-account"></i> Sign Up <i class="zmdi zmdi-caret-down"></i></a>
+                                   
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="search-container">
+                            <form action="#">
+                                <div class="hover_category">
+                                    <select class="select_option" name="select" id="categori2">
+                                        <option selected value="1">All Categories</option>
+                                        <option value="2">Accessories</option>
+                                        <option value="3">Accessories & More</option>
+                                        <option value="4">Butters & Eggs</option>
+                                        <option value="5">Camera & Video </option>
+                                        <option value="6">Mornitors</option>
+                                        <option value="7">Tablets</option>
+                                        <option value="8">Laptops</option>
+                                        <option value="9">Handbags</option>
+                                        <option value="10">Headphone & Speaker</option>
+                                        <option value="11">Herbs & botanicals</option>
+                                        <option value="12">Vegetables</option>
+                                        <option value="13">Shop</option>
+                                        <option value="14">Laptops & Desktops</option>
+                                        <option value="15">Watchs</option>
+                                        <option value="16">Electronic</option>
+                                    </select>
+                                </div>
+                                <div class="search_box">
+                                    <input placeholder="Search product..." type="text">
+                                    <button type="submit"><i class="zmdi zmdi-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="mini_cart_wrapper">
+                            <a href="javascript:void(0)"><i class="zmdi zmdi-shopping-basket"></i> <span>2items - $213.00</span> </a>
+                            <!--mini cart-->
+                            <div class="mini_cart">
+                                <div class="cart_item">
+                                    <div class="cart_img">
+                                        <a href="#"><img src="~/img/s-product/product.jpg" alt=""></a>
+                                    </div>
+                                    <div class="cart_info">
+                                        <a href="#">Condimentum Watches</a>
+
+                                        <span class="quantity">Qty: 1</span>
+                                        <span class="price_cart">$60.00</span>
+
+                                    </div>
+                                    <div class="cart_remove">
+                                        <a href="#"><i class="ion-android-close"></i></a>
+                                    </div>
+                                </div>
+                                <div class="cart_item">
+                                    <div class="cart_img">
+                                        <a href="#"><img src="~/img/s-product/product2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="cart_info">
+                                        <a href="#">Officiis debitis</a>
+                                        <span class="quantity">Qty: 1</span>
+                                        <span class="price_cart">$69.00</span>
+                                    </div>
+                                    <div class="cart_remove">
+                                        <a href="#"><i class="ion-android-close"></i></a>
+                                    </div>
+                                </div>
+                                <div class="mini_cart_table">
+                                    <div class="cart_total">
+                                        <span>Subtotal:</span>
+                                        <span class="price">$138.00</span>
+                                    </div>
+                                </div>
+
+                                <div class="mini_cart_footer">
+                                    <div class="cart_button">
+                                        <a href="cart.html">View cart</a>
+                                        <a href="checkout.html">Checkout</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--mini cart end-->
+                        </div>
+                        <div id="menu" class="text-left ">
+                            <ul class="offcanvas_main_menu">
+                                <li class="menu-item-has-children active">
+                                    <a href="#">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Home 1</a></li>
+                                        <li><a href="index-2.html">Home 2</a></li>
+                                        <li><a href="index-3.html">Home 3</a></li>
+                                        <li><a href="index-4.html">Home 4</a></li>
+                                        <li><a href="index-5.html">Home 5</a></li>
+                                        <li><a href="index-6.html">Home 6</a></li>
+                                        <li><a href="index-7.html">Home 7</a></li>
+                                        <li><a href="index-8.html">Home 8</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item-has-children">
+                                            <a href="#">Shop Layouts</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="shop-fullwidth.html">Full Width</a></li>
+                                                <li><a href="shop-fullwidth-list.html">Full Width list</a></li>
+                                                <li><a href="shop-right-sidebar.html">Right Sidebar </a></li>
+                                                <li><a href="shop-right-sidebar-list.html"> Right Sidebar list</a></li>
+                                                <li><a href="shop-list.html">List View</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="#">other Pages</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="cart.html">cart</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="my-account.html">my account</a></li>
+                                                <li><a href="404.html">Error 404</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="#">Product Types</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="product-details.html">product details</a></li>
+                                                <li><a href="product-sidebar.html">product sidebar</a></li>
+                                                <li><a href="product-grouped.html">product grouped</a></li>
+                                                <li><a href="variable-product.html">product variable</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">blog</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog.html">blog</a></li>
+                                        <li><a href="blog-details.html">blog details</a></li>
+                                        <li><a href="blog-fullwidth.html">blog fullwidth</a></li>
+                                        <li><a href="blog-sidebar.html">blog sidebar</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">pages </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="services.html">services</a></li>
+                                        <li><a href="portfolio.html">portfolio</a></li>
+                                        <li><a href="faq.html">Frequently Questions</a></li>
+                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="login.html">login</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="404.html">Error 404</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="my-account.html">my account</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="about.html">about Us</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="contact.html"> Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="Offcanvas_footer">
+                            <span><a href="#"><i class="fa fa-envelope-o"></i> info@yourdomain.com</a></span>
+                            <ul>
+                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Offcanvas menu area end-->
+    <!--slider area start-->
+    @RenderBody();
+    <!--brand newsletter area start-->
+    <div class="brand_newsletter_area mb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="brand_container owl-carousel">
+                        <div class="single_brand">
+                            <a href="#"><img style="height:auto" src="~/img/brand/brand.png" alt=""></a>
+                        </div>
+                        <div class="single_brand">
+                            <a href="#"><img style="height:auto" src="~/img/brand/brand1.png" alt=""></a>
+                        </div>
+                        <div class="single_brand">
+                            <a href="#"><img style="height:auto" src="~/img/brand/brand2.png" alt=""></a>
+                        </div>
+                        <div class="single_brand">
+                            <a href="#"><img style="height:auto" src="~/img/brand/brand3.png" alt=""></a>
+                        </div>
+                        <div class="single_brand">
+                            <a href="#"><img style="height:auto" src="~/img/brand/brand4.png" alt=""></a>
+                        </div>
+                        <div class="single_brand">
+                            <a href="#"><img style="height:auto" src="~/img/brand/brand5.png" alt=""></a>
+                        </div>
+                        <div class="single_brand">
+                            <a href="#"><img style="height:auto" src="~/img/brand/brand1.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="newsletter_inner newsletter_seven">
+                        <div class="newsletter_content">
+                            <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                        </div>
+                        <div class="newsletter_form">
+                            <form action="#">
+                                <input placeholder="Email..." type="text">
+                                <button type="submit"><i class="zmdi zmdi-mail-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--brand area end-->
+    <footer class="footer_widgets ">
+        <div style="background-color:black !important;" class="footer_seven_inner">
+            <div class="container">
+                <div class="footer_top">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="widgets_container contact_us">
+                                <a href="index.html"><img style="width:50%;" src="~/img/logo/logom2.png" alt=""></a>
+                                <div class="footer_contact">
+                                    <ul>
+                                        <li><i class="zmdi zmdi-home"></i><span>Addresss:</span> 2 Fauconberg Rd,Chiswick, London</li>
+                                        <li><i class="zmdi zmdi-phone-setting"></i><span>Phone:</span><a href="tel:(+1) 866-540-3229">(+1) 866-540-3229</a> </li>
+                                        <li><i class="zmdi zmdi-email"></i><span>Email:</span>  info@plazathemes.com</li>
+                                    </ul>
+                                </div>
+                                <div class="social_icone">
+                                    <ul>
+                                        <li class="share">
+                                            <a href="#" title="rss"><i class="fa fa-share-alt"></i></a>
+                                            <div class="social_title">
+                                                <p>Subscribe</p>
+                                                <h3>Rss Feed</h3>
+                                            </div>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#" title="twitter"><i class="fa fa-twitter"></i></a>
+                                            <div class="social_title">
+                                                <p>Follow Us</p>
+                                                <h3>Twitter</h3>
+                                            </div>
+                                        </li>
+                                        <li class="facebook">
+                                            <a href="#" title="facebook"><i class="fa fa-facebook"></i></a>
+                                            <div class="social_title">
+                                                <p>Find Us</p>
+                                                <h3>Facebook</h3>
+                                            </div>
+                                        </li>
+                                        <li class="google_plus">
+                                            <a href="#" title="google"><i class="fa fa-google-plus"></i></a>
+                                            <div class="social_title">
+                                                <p>Find Us</p>
+                                                <h3>Google+</h3>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-7">
+                            <div class="row">
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5720.73145246128!2d13.157866227606798!3d46.11979682218928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477a34753be6653b%3A0x681fee89c9118520!2s33030%20Brazzacco%2C%20Province%20of%20Udine%2C%20Italy!5e1!3m2!1sen!2s!4v1578261558453!5m2!1sen!2s"
+                                            width="450" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="widgets_container widget_menu">
+                                        <h3>CUSTOMER SERVICE</h3>
+                                        <div class="footer_menu">
+                                            <ul>
+                                                <li><a href="#">Shipping & Returns</a></li>
+                                                <li><a href="#"> Secure Shopping</a></li>
+                                                <li><a href="#">International Shipping</a></li>
+                                                <li><a href="#"> Affiliates</a></li>
+                                                <li><a href="contact.html"> Contact</a></li>
+                                                <li><a href="#"> Travel</a></li>
+                                                <li><a href="#">ecommerce</a></li>
+                                                <li><a href="#"> Creative</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="widgets_container widget_menu">
+                                        <h3>Information</h3>
+                                        <div class="footer_menu">
+                                            <ul>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="#">Delivery infomation</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#"> Travel</a></li>
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="#">Portfolio</a></li>
+                                                <li><a href="#">Conditions</a></li>
+                                                <li><a href="#"> Frequently Questions</a></li>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer_bottom footer_bottom_seven">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="copyright_area">
+                            <p>Copyright &copy; 2019 <a href="#"> pallas </a>  All Right Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="footer_payment text-right">
+                            <p><img style="height:auto;" src="~/img/icon/payment.png" alt=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer area end-->
+
+    <script src="~/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script src="~/js/main.js"></script>
+    <script src="~/js/MyAjax.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

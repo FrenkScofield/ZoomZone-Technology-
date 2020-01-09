@@ -1,0 +1,49 @@
+﻿@model HomeModels
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<form method="post" enctype="multipart/form-data" class="pvId">
+    <div class="form-group">
+        <input type="hidden" asp-for="Brand.Id" />
+        <label asp-for="Category.Name"></label>
+        <select asp-for="Category.Id">
+            <option value="@Model.Categories.FirstOrDefault(v=>v.Id==Model.CatBraPivot.CategoryId).Id">@Model.Categories.FirstOrDefault(v => v.Id == Model.CatBraPivot.CategoryId).Name</option>
+            @foreach (var item in Model.Categories)
+            {
+                if (item.Id!=Model.CatBraPivot.CategoryId)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            }
+        </select>
+
+        <span asp-validation-for="CatBraPivots" class="text-danger"></span>
+    </div> 
+   
+    <div class="form-group">
+        <label asp-for="Brand.Name"></label>
+        <input type="text" asp-for="Brand.Name" class="from-control" style="font-size: 31px; width: 75%; border-radius: 15px; margin: 20px 0px; margin-left: 2%;" />
+        <span asp-validation-for="Brand.Name" class="text-danger"></span>
+    </div>
+
+
+    <input type="submit" class="btn btn-success btn-lg btn-block" value="Update" />
+
+    <a asp-action="BrendIndex" class="btn btn-primary btn-block btn-lg mt-3">Back to index</a>
+
+</form>
+
+@section scripts
+{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
+
+}
+
+

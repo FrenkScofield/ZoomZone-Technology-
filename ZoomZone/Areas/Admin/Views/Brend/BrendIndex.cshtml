@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Brand> 
+
+@{
+    ViewData["Title"] = "BrendIndex";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<a asp-action="Create" class="btn btn-outline-success btn-block btn-lg" style="margin:10px 0px;">CREATE NEW PRODUCT</a>
+
+<table class="table-bordered table table-striped">
+    <thead>
+        <tr>
+            <th>Cagagory Name</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.Raw(item.Name)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                        <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    @if (Model.Count() > 2)
+                    {
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
